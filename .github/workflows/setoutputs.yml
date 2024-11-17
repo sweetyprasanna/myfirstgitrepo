@@ -11,9 +11,13 @@ on:
         name: set output
         id: set-output
         shell: bash
-        run: echo "age=23">> $GITHUB_OUTPUT(IT IS USED TO SET VALUES TO OUTPUT)
-
+        run: |
+        echo "age=23">> $GITHUB_OUTPUT(IT IS USED TO SET VALUES TO OUTPUT)
+        echo "name=naga">> $GITHUB_OUTPUT
+        
         name: acess output
-        run: echo ${{steps.ste.output.outputs.age}}
+        run: |
+        echo ${{steps.set.output.outputs.age}}
+        echo ${{steps.set.output.outputs.name}}
         
 
