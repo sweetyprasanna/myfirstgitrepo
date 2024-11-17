@@ -1,6 +1,6 @@
 name: step output
 on:
-  push: (whenever there is a commit on a main branchi want thsis workflow to be triggered
+  push: (whenever there is a commit on a main branch i want thsis workflow to be triggered
     branches: [main]
 
   jobs: 
