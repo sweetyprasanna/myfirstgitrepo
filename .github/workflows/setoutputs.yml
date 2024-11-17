@@ -1,1 +1,19 @@
+name: step output
+on:
+  push: (whenever there is a commit on a main branchi want thsis workflow to be triggered
+    branches: [main]
+
+  jobs: 
+    job1:
+      runs-on: Ubuntu-latest
+      
+      steps: 
+        name: set output
+        id: set-output
+        shell: bash
+        run: echo "age=23">> $GITHUB_OUTPUT(IT IS USED TO SET VALUES TO OUTPUT)
+
+        name: acess output
+        run: echo ${{steps.ste.output.outputs.age}}
+        
 
