@@ -9,4 +9,4 @@ jobs:
       - name: print nm
         run: echo "name = prasanna" >> $GITHUB_OUTPUT
       - name: display output
-        run: echo "${{GITHUB_OUTPUT}}"
+        run: echo "$GITHUB_OUTPUT"
