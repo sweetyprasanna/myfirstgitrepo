@@ -1,10 +1,12 @@
-ename: First Workflow
+name: First Workflow
 on: workflow_dispatch
 jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-      -name: print greeting
-      run: echo "hello"
-      -name: print goodbyr
-      run: echo "hi"
+      - name: print greeting
+        run: echo "hello"
+      - name: print nm
+        run: echo "name = prasanna" >> $GITHUB_OUTPUT
+      - name: display output
+        run: echo "${{GITHUB_OUTPUT}}"
